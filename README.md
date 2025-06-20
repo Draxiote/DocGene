@@ -68,3 +68,13 @@ docker compose -f docker-compose.tgi.yml up -d
 ### microsoft/Phi-3.5-mini-instruct
 ### google/gemma-2-2b-it
 ### meta-llama/Llama-3.2-1B-Instruct
+
+### Run with Docker
+```bash
+docker run --gpus all \
+  -v ~/.cache/huggingface:/root/.cache/huggingface \
+  -e HF_TOKEN=$HF_TOKEN \
+  -p 8000:80 \
+  ghcr.io/huggingface/text-generation-inference:latest \
+  --model-id $MODEL
+```
