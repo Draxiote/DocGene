@@ -69,7 +69,7 @@ docker compose -f docker-compose.tgi.yml up -d
 ### google/gemma-2-2b-it
 ### meta-llama/Llama-3.2-1B-Instruct
 
-### Run with Docker
+## Run with Docker
 ```bash
 docker run --gpus all \
   -v ~/.cache/huggingface:/root/.cache/huggingface \
