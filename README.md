@@ -12,11 +12,32 @@
 curl http://localhost:11434/api/pull -d '{
   "model": "deepseek-r1"
 }'
+```
 
-#⚡ Test the Model
-
+# Test the Model
+```bash
 curl http://localhost:11434/api/chat -d '{
   "model": "deepseek-r1",
   "messages": [{"role":"user","content":"Why is the sky blue?"}],
   "stream": false
 }'
+```
+
+# Launch the Application
+```bash
+docker compose -f docker-compose.local.yml build
+docker compose -f docker-compose.local.yml up -d
+# View the logs:
+docker compose -f docker-compose.local.yml logs -f
+```
+
+# Access the App
+Open your browser and go to: http://localhost:8501
+
+# Configure the Application
+Database Configuration
+Use the following settings:
+
+  
+Model Configuration
+Point the app to your Ollama instance (ensure LLM_ENDPOINT is set to your machine’s IP address):
