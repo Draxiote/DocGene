@@ -36,14 +36,14 @@ Open your browser and go to: http://localhost:8501
 
 # Configure the Application
 
-## Database Configuration
+### Database Configuration
 
 ### Use the following settings:
 - Setup DB configuration as below
 
 <img width="493" alt="image" src="https://github.com/user-attachments/assets/490e5469-e299-471b-8c9c-fa0e002f2bb6">
 
-## Model Configuration
+### Model Configuration
 
 ### Point the app to your Ollama instance (ensure LLM_ENDPOINT is set to your machine’s IP address):
 
@@ -51,4 +51,20 @@ Open your browser and go to: http://localhost:8501
   
 <img width="480" alt="image" src="https://github.com/user-attachments/assets/d7b6e8c0-85e5-4b17-954a-3b79187d5c95">
 
-  
+# Running on the Cloud (A100/H100 GPU)
+
+### Hugging Face Models (Text Generation Inference)
+
+```bash
+export HF_TOKEN=<YOUR_TOKEN>
+docker compose -f docker-compose.tgi.yml build
+docker compose -f docker-compose.tgi.yml up -d
+```
+
+## Supported Model List
+### Here are some alternatives you can use:
+### defog/llama-3-sqlcoder-8b
+### meta-llama/Llama-3.2-1B-Instruct
+### microsoft/Phi-3.5-mini-instruct
+### google/gemma-2-2b-it
+### meta-llama/Llama-3.2-1B-Instruct
